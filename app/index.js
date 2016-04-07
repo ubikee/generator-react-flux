@@ -1,13 +1,13 @@
 var generators = require('yeoman-generator');
 
-module.exports = generator.Base.extend({
+module.exports = generators.Base.extend({
 
   projectName: this.appname,
   projectDescription: '',
   authorName: '',
 
   prompting: function() {
-    var done = thtis.async();
+    var done = this.async();
     this.prompt([
         { type: 'input', name: 'name', message: 'Project Name', default: this.appname},
         { type: 'input', name: 'description', message: 'Project Description', default: ''},
@@ -17,17 +17,18 @@ module.exports = generator.Base.extend({
         this.projectDescription = answers.description;
         this.authorName = answers.author
         done();
-      }.bind(this);
+      }.bind(this)
     );
   },
 
   writting: function () {
     this.template(this.templatePath('package.json'), this.destinationPath('package.json'), this);
+    this.copy(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'));
     this.directory(this.templatePath('src'), this.destinationPath('src'));
     this.directory(this.templatePath('dist'), this.destinationPath('dist'));
   },
 
-  install: funtion () {
+  install: function () {
     this.npmInstall();
   }
 
