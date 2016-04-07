@@ -1,0 +1,23 @@
+{
+  "name": "generator-react-flux",
+  "version": "0.0.1",
+  "description": "React Flux boilerplate generator",
+  "author": "Ernesto Roldan Garcia",
+  "homepage": "https://github.com/ubikee/generator-react-flux",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ubikee/generator-react-flux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ubikee/generator-react-flux/issues"
+  }
+}
