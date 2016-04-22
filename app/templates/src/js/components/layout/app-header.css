@@ -1,0 +1,72 @@
+header {
+  padding: 15px;
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+header > .title {
+  display: flex;
+  flex:1;
+  align-items: center;
+}
+
+header > .title > #navButton {
+  display:none;
+}
+
+header > .title > #icon {
+  display:flex;
+}
+
+header > .title > .icon {
+  color: rgba(0, 0, 0, 0.8);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > .title  h1 {
+  text-shadow: 2px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 0px;
+}
+
+header > .searchbox {
+  flex:1;
+}
+
+header > #searchButton {
+  display:none;
+}
+
+@media all and (max-width:1280px) {
+
+  header {
+    background-color: inherit;
+    color: inherit;
+    justify-content: flex-start;
+  }
+
+  header > .title > .icon {
+    color: inherit;
+    margin-top: 15px;
+  }
+
+  header > .title > #navButton {
+    display: block;
+  }
+  header > .title > #icon {
+    display:none;
+  }
+
+  header > .searchbox {
+    display: none;
+  }
+
+  header > #searchButton {
+    display:flex;
+  }
+}
